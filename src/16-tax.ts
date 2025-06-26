@@ -13,8 +13,10 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax() {}
-
+function calculateSalesTax(price: number): number {
+    const TAX_PERCENT = 0.21
+    return Number((TAX_PERCENT * price).toFixed(2))
+}
 const product = "You don't know JS";
 const price = 19.99;
 const salesTax = calculateSalesTax(price);
