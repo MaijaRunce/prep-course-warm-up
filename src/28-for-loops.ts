@@ -9,7 +9,15 @@ export {};
  *  - https://www.youtube.com/watch?v=Kn06785pkJg (JavaScript Loops Made Easy)
 */
 
-function goThroughNumbers(start, end) {}
+const goThroughNumbers = (start: number, end: number) => {
+   for (let i = start; i <= end; i ++){
+        if ( i % 2 === 0 ){
+            console.log (`${i} - Even`)
+        } else {
+            console.log (`${i} - Odd`)
+            }
+        }
+    }   
 
 goThroughNumbers(3, 7);
 /* Expected output:
