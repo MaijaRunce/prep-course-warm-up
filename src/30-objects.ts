@@ -20,6 +20,13 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+type Book = {
+  title: string;
+  author: string;
+}
+
+const getTheTitles = (books: Book[]) => {
+  return books.map((n) => n.title) 
+};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']
