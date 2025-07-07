@@ -24,9 +24,11 @@ const library = [
   }
 ];
 
-for ( let i = 0; i< library.length; i++)
 
-{
+const showStatus = (library: Book[]) => {
+
+for ( let i = 0; i< library.length; i++){
+
 const book = "`" + library[i].title + "`" + `by `+ library[i].author + ".";
 
 if (library[i].isRead){
@@ -35,12 +37,8 @@ if (library[i].isRead){
         console.log ("You still need to read" + book);
         }
 }
-// const showStatus = (library: Book) => {
-//   console.log()
-// }
-
-
-// showStatus(library);
+}
+showStatus(library);
 
 /*
   Expected output:
