@@ -1,5 +1,11 @@
 export {};
 
+type Book = {
+  title: string;
+  author: string;
+  isRead: boolean;
+}
+
 const library = [
   {
     title: "The Road Ahead",
@@ -18,9 +24,23 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
+for ( let i = 0; i< library.length; i++)
 
-showStatus(library);
+{
+const book = "`" + library[i].title + "`" + `by `+ library[i].author + ".";
+
+if (library[i].isRead){
+        console.log ("Already read" + book);
+        } else {
+        console.log ("You still need to read" + book);
+        }
+}
+// const showStatus = (library: Book) => {
+//   console.log()
+// }
+
+
+// showStatus(library);
 
 /*
   Expected output:
