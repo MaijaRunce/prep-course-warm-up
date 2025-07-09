@@ -12,7 +12,10 @@ const protectEmail = (email: string) => {
     if (parts[0].length < 3) {
       return "..." + "@" + parts[1];
     } else {
-        return parts[0].slice(0,3) +"..." + "@" + parts[1];
+      if (parts[0].length < 6) {
+        return parts[0].slice(0, 2) + "..." + "@" + parts[1];
+      }
+      return parts[0].slice(0, 3) + "..." + "@" + parts[1];
     }
   }
 };
@@ -21,3 +24,4 @@ console.log(protectEmail("secret123@codelex.io")); // Expected result: sec...@co
 console.log(protectEmail("example@example.com")); // Expected result: exa...@example.com
 console.log(protectEmail("12345@example.com")); // Expected result: 12...@example.com
 console.log(protectEmail("12@example.com")); // Expected result: ...@example.com
+
